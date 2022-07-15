@@ -1,6 +1,6 @@
 :root {
-  --primary-text-color: #757575;
-  --secondary-text-color: #212121;
+  --main-text-color: #757575;
+  --second-text-color: #212121;
   --third-text-color: #ffffff;
 
   --main-accent-color: #2196f3;
@@ -8,12 +8,18 @@
 
   --logo-color: #000000;
   --secondary-logo-color: #2196f3;
+
+  --first-bgc-color: #FFFFFF;
+  --second-bgc-color: #2F303A;
+  --third-bgc-color: #E5E5E5;
+  --fourth-bgc-color: #F5F4FA;
+  --btn-bgc-color: #2196f3;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: var(--primary-text-color);
-  background-color: #ffffff;
+  color: var(--main-text-color);
+  background-color:var(--first-bgc-color);
 }
 
 /*--------------------LOGO -------------------*/
@@ -35,12 +41,13 @@ body {
 
 /*------------- HEADER: NAVIGATION, CONTACTS -----------------*/
 
-.navigation-link {
+.nav-link,
+.contacts-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
+  color: var(--second-text-color);
   text-decoration: none;
 }
 
@@ -48,17 +55,12 @@ body {
   list-style: none;
 }
 
-.navigation-link.current {
+.nav-link.current {
   color: var(--main-accent-color);
 }
 
 .contacts-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  text-decoration: none;
+  color: var(--main-text-color);
 }
 
 .contacts-link:hover,
@@ -69,7 +71,7 @@ body {
 /* -------------MAIN: HERO ----------------------*/
 
 .hero {
-  background-color: #2f303a;
+  background-color:var(--second-bgc-color);
 }
 .hero-title {
   font-size: 44px;
@@ -81,6 +83,7 @@ body {
 }
 
 .hero-btn {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -89,12 +92,16 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--third-text-color);
-  background-color: #2196f3;
+  background-color: var(--btn-bgc-color);
+}
+
+.hero-btn:hover {
+  background-color: var(--secondary-accent-color);
 }
 
 /*-------------- MAIN: BENEFITS ---------------------*/
 .benefits {
-  background-color: #e5e5e5;
+  background-color:var(--third-bgc-color);
 }
 
 .visually-hidden {
@@ -116,55 +123,96 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: var(--second-text-color);
 }
 
 .benefits-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 
 /*--------------MAIN: WORKS-------------------*/
 .works {
-  background-color: #e5e5e5;
+  background-color:var(--third-bgc-color);
 }
 
-.works-title {
+.works-main-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: var(--second-text-color);
 }
 
-/*------------------TEAM------------------------*/
+/*------------------MAIN: TEAM------------------------*/
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--fourth-bgc-color);
 }
 
-.team-pre-title {
+.team-main-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: var(--second-text-color);
 }
 
-.team-title {
+.team-title,
+.team-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: var(--second-text-color);
 }
 
 .team-text {
-  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-text-color);
+}
+
+/*-----------------FOOTER-----------------*/
+
+.footer {
+  background-color:var(--second-bgc-color);
+}
+
+.footer-logo {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color:var(--third-bgc-color);
+  text-decoration: none;
+}
+
+.address-list {
+  list-style: none;
+}
+
+.address-location,
+.address-link {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--third-text-color);
+}
+
+.address-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: var(--main-accent-color);
 }
